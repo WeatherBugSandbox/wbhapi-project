@@ -1,0 +1,2 @@
+obs api: http://stg.en.data.api.observations.enqa.co/data/observations/v1/historical/ex?providerid=3&stationid=AWSHQ&startdatetimeutc=1469478703&enddatetimeutc=1469737903&compact=true&includeRsVersion=true
+load api (Jump Box Only): http://dr.api.earthnetworks.endev.co/demandresponse/report/powerdata/v1?consumerUtilityId=10032789400168690&periodStartUnix=1467404461&periodEndUnix=1468268461

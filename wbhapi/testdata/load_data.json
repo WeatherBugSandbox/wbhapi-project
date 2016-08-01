@@ -1,0 +1,28 @@
+{
+  "Result": {
+    "ConsumerUtilityId": "10032789400168690",
+    "PeriodStartUtc": "2016-05-01T00:00:00Z",
+    "PeriodEndUtc": "2016-05-01T00:59:59Z",
+    "Records": [
+      {
+        "DateTimeUtc": "2016-05-01T00:00:00Z",
+        "Value": 1.105
+      },
+      {
+        "DateTimeUtc": "2016-05-01T00:15:00Z",
+        "Value": 0.823
+      },
+      {
+        "DateTimeUtc": "2016-05-01T00:30:00Z",
+        "Value": 0.679
+      },
+      {
+        "DateTimeUtc": "2016-05-01T00:45:00Z",
+        "Value": 0.628
+      }
+    ]
+  },
+  "Code": 200,
+  "ErrorMessage": null,
+  "Id": "b0f478e6-94cf-4c81-bba6-4e600f87b191"
+}
