@@ -99,7 +99,7 @@ class HistoricalObservationSchema(Schema):
         return HistoricalObservation(**data)
 
 
-class Result(nameddict.Base):
+class ObsResult(nameddict.Base):
     __attrs__ = ["station", "historical_observation"]
 
     def __init__(self, **kwargs):
@@ -114,7 +114,7 @@ class ResultSchema(Schema):
 
     @post_load
     def make_result(self, data):
-        return Result(**data)
+        return ObsResult(**data)
 
 
 class EnHistoricalObs(nameddict.Base):
@@ -124,7 +124,7 @@ class EnHistoricalObs(nameddict.Base):
         self.id = kwargs.get("id")
         self.code = kwargs.get("code")
         self.error_message = kwargs.get("error_message")
-        self.result = kwargs.get("result", Result())
+        self.result = kwargs.get("result", ObsResult())
 
     def get_core_data(self):
         """
@@ -260,7 +260,7 @@ if __name__ == "__main__":
 
     def test_en_historical_obs_model():
         assert isinstance(en_historical_obs, EnHistoricalObs)
-        assert isinstance(en_historical_obs.result, Result)
+        assert isinstance(en_historical_obs.result, ObsResult)
         assert isinstance(en_historical_obs.result.station, EnStation)
         assert isinstance(
             en_historical_obs.result.historical_observation[0], HistoricalObservation)
